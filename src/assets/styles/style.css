@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&family=Righteous&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #fb6b6b;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container h1 {
+  font-family: "Righteous", sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+  margin-top: 12px;
+}
+.container img {
+  width: 136px;
+  height: auto;
+  margin-top: 150px;
+}
+.button {
+  width: 246px;
+  height: 54px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  text-align: center;
+  text-justify: center;
+  border: 1px solid #d70900;
+  border-radius: 5px;
+  font-family: "Recursive", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #d70900;
+}
+
+.questions-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  width: 60%;
+  margin-top: 42px;
+  margin-bottom: 50px;
+}
+.questions-logo img {
+  width: 52px;
+  height: 60px;
+  margin-top: 0px;
+}
+.flashcard {
+  width: 300px;
+  height: 65px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  color: #333333;
+  font-family: "Recursive", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-width: 0px;
+  margin: 12px auto;
+}
+.flashcard ion-icon {
+  font-size: 20px;
+}
+
+.flashcard:hover {
+  cursor: pointer;
+}
