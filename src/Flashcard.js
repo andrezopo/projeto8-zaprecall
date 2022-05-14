@@ -1,8 +1,3 @@
-export default function Flashcard({ number }) {
-  return (
-    <button className="flashcard">
-      <span>Pergunta {number + 1}</span>
-      <ion-icon name="play-outline"></ion-icon>
-    </button>
-  );
+export default function Flashcard({ number, children }) {
+  return <button className="flashcard">{children}</button>;
 }
