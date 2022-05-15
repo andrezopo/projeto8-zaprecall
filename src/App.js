@@ -3,7 +3,7 @@ import React from "react";
 import QuestionsScreen from "./QuestionsScreen";
 
 export default function App() {
-  const deck = [
+  let deck = [
     {
       question: "O que é JSX?",
       answer: "Uma extensão de linguagem do JavaScript",
@@ -38,6 +38,11 @@ export default function App() {
         "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente",
     },
   ];
+
+  function comparator() {
+    return Math.random() - 0.5;
+  }
+  deck.sort(comparator);
 
   const [screen, setScreen] = React.useState(true);
 

@@ -32,8 +32,13 @@ export default function QuestionsScreen({ deck }) {
       className: "green-decoration",
     });
   }
-  console.log(footerArray);
 
+  function comparator() {
+    return Math.random() - 0.5;
+  }
+  deck.sort(comparator);
+
+  console.log(deck);
   return (
     <>
       <MainScreen>

@@ -144,6 +144,10 @@
   line-height: 22px;
 }
 
+.footer ion-icon {
+  font-size: 23px;
+}
+
 .done {
   display: flex;
   flex-direction: column;
