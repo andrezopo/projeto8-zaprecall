@@ -4,8 +4,7 @@ export default function AnswerCard({
   changeCard,
   setColor,
   increment,
-  footerArray,
-  arrayPush,
+  whichIcon,
 }) {
   function chosenAnswer(answer) {
     switch (answer) {
@@ -13,38 +12,22 @@ export default function AnswerCard({
         chooseAnswer("close-circle");
         changeCard();
         setColor("red-decoration");
-        arrayPush(
-          footerArray.push({
-            className: "red-decoration",
-            name: "close-circle",
-          })
-        );
+        whichIcon("red");
         break;
       case "almost wrong":
         chooseAnswer("help-circle");
         changeCard();
         setColor("dark-yellow-decoration");
-        arrayPush(
-          footerArray.push({
-            className: "dark-yellow-decoration",
-            name: "help-circle",
-          })
-        );
+        whichIcon("yellow");
         break;
       case "zap":
         chooseAnswer("checkmark-circle");
         changeCard();
         setColor("green-decoration");
-        arrayPush(
-          footerArray.push({
-            className: "green-decoration",
-            name: "checkmark-circle",
-          })
-        );
+        whichIcon("green");
         break;
     }
     increment();
-    console.log(footerArray);
   }
 
   return (

@@ -9,8 +9,7 @@ export default function CardContent({
   number,
   answer,
   increment,
-  footerArray,
-  arrayPush,
+  whichIcon,
 }) {
   const [resultIcon, setResultIcon] = React.useState("close-circle");
   const [cardContent, setCardContent] = React.useState("face");
@@ -46,8 +45,7 @@ export default function CardContent({
           text={answer}
           setColor={setIconColor}
           increment={increment}
-          footerArray={footerArray}
-          arrayPush={arrayPush}
+          whichIcon={whichIcon}
         />
       );
     case "result":
