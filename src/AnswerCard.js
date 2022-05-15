@@ -3,6 +3,9 @@ export default function AnswerCard({
   chooseAnswer,
   changeCard,
   setColor,
+  increment,
+  footerArray,
+  arrayPush,
 }) {
   function chosenAnswer(answer) {
     switch (answer) {
@@ -10,18 +13,38 @@ export default function AnswerCard({
         chooseAnswer("close-circle");
         changeCard();
         setColor("red-decoration");
+        arrayPush(
+          footerArray.push({
+            className: "red-decoration",
+            name: "close-circle",
+          })
+        );
         break;
       case "almost wrong":
         chooseAnswer("help-circle");
         changeCard();
         setColor("dark-yellow-decoration");
+        arrayPush(
+          footerArray.push({
+            className: "dark-yellow-decoration",
+            name: "help-circle",
+          })
+        );
         break;
       case "zap":
         chooseAnswer("checkmark-circle");
         changeCard();
         setColor("green-decoration");
+        arrayPush(
+          footerArray.push({
+            className: "green-decoration",
+            name: "checkmark-circle",
+          })
+        );
         break;
     }
+    increment();
+    console.log(footerArray);
   }
 
   return (

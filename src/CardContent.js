@@ -4,7 +4,14 @@ import FaceCard from "./FaceCard";
 import QuestionCard from "./QuestionCard";
 import ResultCard from "./ResultCard";
 
-export default function CardContent({ question, number, answer }) {
+export default function CardContent({
+  question,
+  number,
+  answer,
+  increment,
+  footerArray,
+  arrayPush,
+}) {
   const [resultIcon, setResultIcon] = React.useState("close-circle");
   const [cardContent, setCardContent] = React.useState("face");
   const [iconColor, setIconColor] = React.useState("");
@@ -38,6 +45,9 @@ export default function CardContent({ question, number, answer }) {
           chooseAnswer={setResultIcon}
           text={answer}
           setColor={setIconColor}
+          increment={increment}
+          footerArray={footerArray}
+          arrayPush={arrayPush}
         />
       );
     case "result":
