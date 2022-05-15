@@ -105,6 +105,9 @@
   justify-content: space-between;
   height: 65px;
 }
+.line-through {
+  text-decoration: line-through;
+}
 .answer-btn {
   width: 30%;
   height: 38px;
@@ -132,4 +135,16 @@
 }
 .green {
   background-color: #2fbe34;
+}
+
+/* Decoration colors */
+
+.red-decoration {
+  color: #ff3030;
+}
+.dark-yellow-decoration {
+  color: #ff922e;
+}
+.green-decoration {
+  color: #2fbe34;
 }
