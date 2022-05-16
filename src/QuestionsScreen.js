@@ -8,7 +8,7 @@ import MainScreen from "./MainScreen";
 import QuestionCard from "./QuestionCard";
 import ZapRecall from "./ZapRecall";
 
-export default function QuestionsScreen({ deck }) {
+export default function QuestionsScreen({ deck, reset }) {
   let [questionsAnswered, setQuestionsAnswered] = React.useState(0);
   const [whichIcon, setWhichIcon] = React.useState("");
   let [footerArray, setFooterArray] = React.useState([]);
@@ -33,7 +33,6 @@ export default function QuestionsScreen({ deck }) {
       className: "green-decoration",
     });
   }
-  console.log(rightAnswers);
 
   return (
     <>
@@ -59,6 +58,7 @@ export default function QuestionsScreen({ deck }) {
         rightAnswers={rightAnswers}
         number={questionsAnswered}
         iconsArray={footerArray}
+        reset={reset}
       />
     </>
   );

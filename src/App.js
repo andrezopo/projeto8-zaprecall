@@ -47,6 +47,11 @@ export default function App() {
 
   const [screen, setScreen] = React.useState(true);
 
+  function reset() {
+    setCardDeck([...cardDeck].sort(comparator));
+    setScreen("true");
+  }
+
   function showQuestions() {
     setScreen(false);
   }
@@ -56,7 +61,7 @@ export default function App() {
       {screen ? (
         <StartScreen showQuestions={showQuestions} />
       ) : (
-        <QuestionsScreen deck={cardDeck} />
+        <QuestionsScreen deck={cardDeck} reset={reset} />
       )}
     </>
   );
