@@ -5,6 +5,7 @@ export default function AnswerCard({
   setColor,
   increment,
   whichIcon,
+  rightAnswers,
 }) {
   function chosenAnswer(answer) {
     switch (answer) {
@@ -13,6 +14,7 @@ export default function AnswerCard({
         changeCard();
         setColor("red-decoration");
         whichIcon("red");
+        rightAnswers(0);
         break;
       case "almost wrong":
         chooseAnswer("help-circle");

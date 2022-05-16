@@ -10,6 +10,7 @@ export default function CardContent({
   answer,
   increment,
   whichIcon,
+  rightAnswers,
 }) {
   const [resultIcon, setResultIcon] = React.useState("close-circle");
   const [cardContent, setCardContent] = React.useState("face");
@@ -46,6 +47,7 @@ export default function CardContent({
           setColor={setIconColor}
           increment={increment}
           whichIcon={whichIcon}
+          rightAnswers={rightAnswers}
         />
       );
     case "result":

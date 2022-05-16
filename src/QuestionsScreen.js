@@ -12,6 +12,7 @@ export default function QuestionsScreen({ deck }) {
   let [questionsAnswered, setQuestionsAnswered] = React.useState(0);
   const [whichIcon, setWhichIcon] = React.useState("");
   let [footerArray, setFooterArray] = React.useState([]);
+  let [rightAnswers, setRightAnswers] = React.useState(8);
 
   function incrementAnswers() {
     setQuestionsAnswered((questionsAnswered = questionsAnswered + 1));
@@ -32,13 +33,8 @@ export default function QuestionsScreen({ deck }) {
       className: "green-decoration",
     });
   }
+  console.log(rightAnswers);
 
-  function comparator() {
-    return Math.random() - 0.5;
-  }
-  deck.sort(comparator);
-
-  console.log(deck);
   return (
     <>
       <MainScreen>
@@ -54,11 +50,16 @@ export default function QuestionsScreen({ deck }) {
               number={index}
               increment={incrementAnswers}
               whichIcon={setWhichIcon}
+              rightAnswers={setRightAnswers}
             />
           </Flashcard>
         ))}
       </MainScreen>
-      <Footer number={questionsAnswered} iconsArray={footerArray} />
+      <Footer
+        rightAnswers={rightAnswers}
+        number={questionsAnswered}
+        iconsArray={footerArray}
+      />
     </>
   );
 }

@@ -42,7 +42,8 @@ export default function App() {
   function comparator() {
     return Math.random() - 0.5;
   }
-  deck.sort(comparator);
+
+  const [cardDeck, setCardDeck] = React.useState(deck.sort(comparator));
 
   const [screen, setScreen] = React.useState(true);
 
@@ -55,7 +56,7 @@ export default function App() {
       {screen ? (
         <StartScreen showQuestions={showQuestions} />
       ) : (
-        <QuestionsScreen deck={deck} />
+        <QuestionsScreen deck={cardDeck} />
       )}
     </>
   );
